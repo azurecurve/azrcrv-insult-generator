@@ -27,6 +27,9 @@ To install the Insult Generator plugin:
 
 == Changelog ==
 Changes and feature additions for the Insult Generator plugin:
+= 1.0.1 =
+* Update azurecurve menu for easier maintenance.
+* Move require of azurecurve menu below security check.
 = 1.0.0 =
 * First version for ClassicPress forked from azurecurve Insult Generator WordPress Plugin.
 
