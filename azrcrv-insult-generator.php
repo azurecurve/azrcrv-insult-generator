@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Insult Generator
  * Description: Uses shortcodes which allow a modern or medieval insult to be generated..
- * Version: 1.0.1
+ * Version: 1.1.0
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/insult-generator
@@ -24,6 +24,10 @@ if (!defined('ABSPATH')){
 
 // include plugin menu
 require_once(dirname( __FILE__).'/pluginmenu/menu.php');
+register_activation_hook(__FILE__, 'azrcrv_create_plugin_menu_ig');
+
+// include update client
+require_once(dirname(__FILE__).'/libraries/updateclient/UpdateClient.class.php');
 
 /**
  * Setup registration activation hook, actions, filters and shortcodes.
@@ -36,6 +40,7 @@ add_action('admin_menu', 'azrcrv_ig_create_admin_menu');
 add_action('network_admin_menu', 'azrcrv_ig_create_network_admin_menu');
 add_action('wp_enqueue_scripts', 'azrcrv_ig_load_css');
 //add_action('the_posts', 'azrcrv_ig_check_for_shortcode');
+add_action('plugins_loaded', 'azrcrv_ig_load_languages');
 
 // add filters
 add_filter('plugin_action_links', 'azrcrv_ig_add_plugin_action_link', 10, 2);
@@ -47,6 +52,17 @@ add_shortcode('MEDIEVALINSULT', 'azrcrv_ig_medieval_insult');
 add_shortcode('medievalinsult', 'azrcrv_ig_medieval_insult');
 add_shortcode('displayinsult', 'azrcrv_ig_display_insult');
 add_shortcode('DISPLAYINSULT', 'azrcrv_ig_display_insult');
+
+/**
+ * Load language files.
+ *
+ * @since 1.0.0
+ *
+ */
+function azrcrv_ig_load_languages() {
+    $plugin_rel_path = basename(dirname(__FILE__)).'/languages';
+    load_plugin_textdomain('azrcrv-ig', false, $plugin_rel_path);
+}
 
 /**
  * Check if shortcode on current page and then load css and jqeury.
@@ -147,7 +163,7 @@ function azrcrv_ig_display_options(){
 	
 	?>
 	<div id="azrcrv-ig-general" class="wrap">
-		<h2><?php echo esc_html(get_admin_page_title()); ?></h2>
+		<h1><?php echo esc_html(get_admin_page_title()); ?></h1>
 		<p>
 			<?php esc_html_e('This plugin works by providing three shortcodes which can be positioned on a post, page or widget:
 <ul><li>moderninsult when clicked will generate a modern insult displayed using the displayinsult shortcode</li>
@@ -211,7 +227,7 @@ function azrcrv_ig_network_settings(){
 
 	?>
 	<div id="azrcrv-ig-general" class="wrap">
-		<h2><?php echo esc_html(get_admin_page_title()); ?></h2>
+		<h1><?php echo esc_html(get_admin_page_title()); ?></h1>
 		<p>
 			<?php esc_html_e('This plugin works by providing three shortcodes which can be positioned on a post, page or widget:
 <ul><li>moderninsult when clicked will generate a modern insult displayed using the displayinsult shortcode</li>
