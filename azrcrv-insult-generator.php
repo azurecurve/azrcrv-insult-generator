@@ -3,10 +3,10 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Insult Generator
  * Description: Uses shortcodes which allow a modern or medieval insult to be generated..
- * Version: 1.1.1
+ * Version: 1.1.2
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
- * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/insult-generator
+ * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/insult-generator/
  * Text Domain: insult-generator
  * Domain Path: /languages
  * ------------------------------------------------------------------------------
@@ -126,7 +126,7 @@ function azrcrv_ig_add_plugin_action_link($links, $file){
 	}
 
 	if ($file == $this_plugin){
-		$settings_link = '<a href="'.get_bloginfo('wpurl').'/wp-admin/admin.php?page=azrcrv-ig">'.esc_html__('Settings' ,'insult-generator').'</a>';
+		$settings_link = '<a href="'.get_bloginfo('wpurl').'/wp-admin/admin.php?page=azrcrv-ig"><img src="'.plugins_url('/pluginmenu/images/Favicon-16x16.png', __FILE__).'" style="padding-top: 2px; margin-right: -5px; height: 16px; width: 16px;" alt="azurecurve" />'.esc_html__('Settings' ,'insult-generator').'</a>';
 		array_unshift($links, $settings_link);
 	}
 
