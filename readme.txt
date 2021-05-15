@@ -1,12 +1,12 @@
 === Insult Generator ===
 
 Description:	Uses shortcodes which allow a modern or medieval insult to be generated.
-Version:		1.2.0
+Version:		1.2.1
 Tags:			insult,medieval,modern,shortcode
 Author:			azurecurve
 Author URI:		https://development.azurecurve.co.uk/
 Plugin URI:		https://development.azurecurve.co.uk/classicpress-plugins/insult-generator/
-Download link:	https://github.com/azurecurve/azrcrv-insult-generator/releases/download/v1.2.0/azrcrv-insult-generator.zip
+Download link:	https://github.com/azurecurve/azrcrv-insult-generator/releases/download/v1.2.1/azrcrv-insult-generator.zip
 Donate link:	https://development.azurecurve.co.uk/support-development/
 Requires PHP:	5.6
 Requires:		1.0.0
@@ -54,6 +54,9 @@ This plugin is developed for ClassicPress, but will likely work on WordPress.
 
 # Changelog
 
+### [Version 1.2.1](https://github.com/azurecurve/azrcrv-insult-generator/releases/tag/v1.2.1)
+ * Update azurecurve menu and logo.
+ 
 ### [Version 1.2.0](https://github.com/azurecurve/azrcrv-insult-generator/releases/tag/v1.2.0)
  * Fix plugin action link to use admin_url() function.
  * Add plugin icon and banner.
