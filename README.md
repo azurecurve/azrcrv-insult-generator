@@ -19,6 +19,8 @@ This plugin is multisite compatible.
  * Activate the plugin.
  * Configure relevant settings via the configuration page in the admin control panel (azurecurve menu).
 
+# About azurecurve
+
 **azurecurve** was one of the first plugin developers to start developing for Classicpress; all plugins are available from [azurecurve Development](https://development.azurecurve.co.uk/) and are integrated with the [Update Manager plugin](https://directory.classicpress.net/plugins/update-manager) for fully integrated, no hassle, updates.
 
 Some of the other plugins available from **azurecurve** are:
