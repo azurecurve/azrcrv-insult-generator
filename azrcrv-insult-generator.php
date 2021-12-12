@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Insult Generator
  * Description: Uses shortcodes which allow a modern or medieval insult to be generated..
- * Version: 1.2.2
+ * Version: 1.2.3
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/insult-generator/
